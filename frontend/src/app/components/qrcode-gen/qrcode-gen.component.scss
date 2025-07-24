@@ -1,7 +1,25 @@
-div {
+#main {
     padding: 20px ;
     display: flex;
-    justify-content:space-between;
+    justify-content:space-around;
     align-items: center;
     height: 150px;
 }
+#input {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    max-width: 25%;
+}
+
+#qrcode {
+    justify-content: center;
+}
+
+@media (max-width: 600px) {
+    #main {
+        flex-direction: column;
+        height: 100%;
+    }
+}   

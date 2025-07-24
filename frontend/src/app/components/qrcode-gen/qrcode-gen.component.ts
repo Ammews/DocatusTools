@@ -16,7 +16,7 @@ export class QrcodeGenComponent {
     this.qrData = this.link;
   }
 
- downloadQRCode() {
+  downloadQRCode() {
     const container = document.querySelector('#qrcode');
     if (!container) {
       console.error('Elemento #qrcode não encontrado.');
@@ -36,13 +36,11 @@ export class QrcodeGenComponent {
       document.body.removeChild(a);
     };
 
-    // Se já existe o canvas, baixa direto
     if (container.querySelector('canvas')) {
       tryDownload();
       return;
     }
 
-    // Se ainda não existe, observa até aparecer
     const observer = new MutationObserver(() => {
       const canvas = container.querySelector('canvas') as HTMLCanvasElement;
       if (canvas) {

@@ -1,7 +1,11 @@
-<div>
-  <input [(ngModel)]="link" (ngModelChange)="createQRCode()" placeholder="Digite seu link">
-
-  <qrcode id="qrcode" [qrdata]="qrData" [width]="128" [errorCorrectionLevel]="'M'"></qrcode>
-
-  <button (click)="downloadQRCode()">Baixar QR Code</button>
+<div id="main">
+  <div id="input">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut possimus ab sit quas dolor cumque.</p>
+    <input [(ngModel)]="link" (ngModelChange)="createQRCode()" placeholder="Digite seu link">
+    <button (click)="downloadQRCode()">Baixar QR Code</button>
+  </div>
+  
+  <div>
+    <qrcode id="qrcode" [qrdata]="qrData" [width]="128" [errorCorrectionLevel]="'M'"></qrcode>
+  </div>
 </div>
